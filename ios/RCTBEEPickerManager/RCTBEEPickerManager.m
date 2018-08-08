@@ -54,7 +54,7 @@ RCT_EXPORT_METHOD(_init:(NSDictionary *)indic){
     NSArray *weightArry=indic[@"wheelFlex"];
     NSString *pickerToolBarFontSize=[NSString stringWithFormat:@"%@",indic[@"pickerToolBarFontSize"]];
     NSString *pickerFontSize=[NSString stringWithFormat:@"%@",indic[@"pickerFontSize"]];
-    NSString *pickerFontFamily=[NSString stringWithFormat:@"%@",indic[@"pickerFontFamily"]];
+    NSString *pickerFontFamily= (indic[@"pickerFontFamily"] != nil) ? [NSString stringWithFormat:@"%@", indic[@"pickerFontFamily"]] : nil;
     NSArray *pickerFontColor=indic[@"pickerFontColor"];
     NSString *pickerRowHeight=indic[@"pickerRowHeight"];
     id pickerData=indic[@"pickerData"];

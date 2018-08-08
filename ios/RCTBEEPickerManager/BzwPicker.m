@@ -45,6 +45,12 @@
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,0, self.frame.size.width, 40)];
     view.backgroundColor = [self colorWith:topbgColor];
+    
+    CALayer *bottomBorder = [CALayer layer];
+    bottomBorder.backgroundColor = [UIColor lightGrayColor].CGColor;
+    
+    bottomBorder.frame = CGRectMake(0, view.frame.size.height - 0.5, view.frame.size.width, 0.5);
+    [view.layer addSublayer:bottomBorder];
     [self addSubview:view];
     
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -941,7 +947,7 @@
     
     if (lbl == nil) {
         lbl = [[UILabel alloc]init];
-        lbl.font = [UIFont fontWithName:_pickerFontFamily size:[_pickerFontSize integerValue]];
+        lbl.font = _pickerFontFamily ? [UIFont fontWithName:_pickerFontFamily size:[_pickerFontSize integerValue]] : [UIFont systemFontOfSize:[_pickerFontSize integerValue]];
         lbl.textColor = [self colorWith:_pickerFontColor];
         lbl.textAlignment = UITextAlignmentCenter;
     }
