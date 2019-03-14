@@ -42,6 +42,17 @@ interface PickerOptions {
      */
     pickerTitleText?: string
 
+     /**
+     * Max allowed characters without showing ellipsis
+     *
+     * Default value is 6
+     *
+     * @type {number}
+     * @memberof PickerOptions
+     */
+
+    pickerTextEllipsisLen?: number
+
     /**
      * Text for the confirm button
      *
