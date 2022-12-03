@@ -74,9 +74,9 @@ RCT_EXPORT_METHOD(_init:(NSDictionary *)indic){
 
     }];
 
-    if ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0 ) {
+    if ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0 && [[UIDevice currentDevice].systemVersion doubleValue] < 16.0) {
         self.height=250;
-    }else{
+    } else{
         self.height=220;
     }
     
